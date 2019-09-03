@@ -111,24 +111,34 @@ q{
 .about{
     display: flex;
     margin: 10rem 0;
+    width: 100%;
+}
+
+.about .logo{
+    width: 50%;
+    display: flex;
+    padding-right: 10%;
 }
 
 .logo-left{
     display: flex;
     text-align: right;
-    margin-right: 17.5rem;
+    width: 50%;
+    justify-content: space-between;
 }
 
 .logo-right{
     display: flex;
     text-align: right;
-    margin-left: 10%;
+    justify-content: space-between;
+    width: 50%;
+    padding-left: 10%;
 }
 
 .about .logo__line{
     background-color: #3ebbf0;
     height: 12.5rem;
-    width: 42rem;
+    flex-basis: 50%;
     align-self: center;
     margin-right: 4rem;
 }
@@ -147,9 +157,10 @@ q{
 }
 
 .about-info{
-    margin: 2rem 17.5rem;
+    padding: 0 10%;
     text-align: left;
     margin-top: 2rem;
+    width: 50%;
 }
 
 .about-info h2,
@@ -186,6 +197,7 @@ q{
 .what-we-do{
     display: flex;
     text-align: left;
+    justify-content: space-between;
 }
 
 .what-we-do__slider{
@@ -231,7 +243,7 @@ q{
 
 .buttons button#next{
     position: absolute;
-    top: 45%;
+    top: 50%;
     right: 1.5rem;
     border: none;
     outline: none;
@@ -240,7 +252,7 @@ q{
 
 .buttons button#prev{
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 1.5rem;
     border: none;
     outline: none;
@@ -289,13 +301,13 @@ q{
     background: url('./Images/Motion-graphics.jpg') no-repeat center center/cover;
 }
 
-
 .what-we-do .logo__line{
     background-color: #3ebbf0;
     height: 12.5rem;
     flex-shrink:1;
     align-self: center;
-    width: 40rem;
+    flex-basis: 70%;
+    margin-left: -21rem;
 }
 
 .what-we-do__text h1,
@@ -312,14 +324,15 @@ q{
     display: flex;
     position: relative;
     text-align: center;
+    justify-content: space-between;
     margin-bottom: 2rem;
 }
 
 .our-work .left-logo{
     display: flex;
-    margin-right: 10%;
     align-self: center;
-    margin-bottom: 8rem;
+    flex-basis: 50%;
+    padding-right: 10%;
 }
 .our-work__slider{
     position: relative;
@@ -330,7 +343,7 @@ q{
 .our-work .logo__line{
     background-color: #3ebbf0;
     height: 12.5rem;
-    width: 32rem;
+    width: 50%;
     align-self: center;
     margin-right: 4rem;
 }
@@ -381,11 +394,12 @@ q{
 
 .contact{
     display: flex;
+    width: 100%;
 }
 
 .contact-form{
     text-align: left;
-    margin: 0 17.5rem;
+    margin: 0 10%;
     width: 61rem;
 }
 
@@ -429,14 +443,18 @@ input:nth-child(2){
     margin-right: 0;
 }
 
-.contact-logo{
+.contact .logo-right{
     text-align: left;
-    margin-left: 17.5rem;
-    margin-top: 4.5rem;
+    padding-left: 10%;
+    width: 50%;
 }
 
-.contact .logo__line{
-    width: 30.5rem;
+.contact-logo__line{
+    flex-basis: 50%;
+    height: 12.5rem;
+    background-color: #3ebbf0;
+    align-self: center;
+    margin-left: 4rem;
 }
 
 .contact-icons{
@@ -459,6 +477,9 @@ input:nth-child(2){
 .contact-icon.letter img{
     width: 3.6rem;
     height: 2.7rem;
+}
+
+.contact-icon.letter{
     margin-right: 0;
 }
 
@@ -486,28 +507,6 @@ input:nth-child(2){
 }
 
 @media screen and (max-width: 1400px){
-    html{
-        font-size: 5px;
-    }
-
-    .our-work-buttons button#next{
-        position: absolute;
-        top: 40%;
-        right: 1.5rem;
-        border: none;
-        outline: none;
-        margin-right: 2rem;
-    }
-    
-    .our-work-buttons button#prev{
-        position: absolute;
-        top: 40%;
-        left: 1.5rem;
-        border: none;
-        outline: none;
-        transform: scaleX(-1);
-        margin-left: 2rem;
-    }
 
     .footer-icons img{
         height: 3.8rem;
@@ -541,9 +540,6 @@ input:nth-child(2){
 }
 
 @media screen and (max-width: 1024px){
-    html{
-        font-size: 7px;
-    }
 
     .contact-icon{
         flex-direction: column;
@@ -557,9 +553,6 @@ input:nth-child(2){
 }
 
 @media screen and (max-width: 900px){
-    html{
-        font-size: 5px;
-    }
 
     .about-info p,
     .contact-form p{
