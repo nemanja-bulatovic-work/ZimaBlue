@@ -1,0 +1,584 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24rem ;
+}
+
+.navigation{
+    display: flex;
+    list-style: none;
+}
+
+.navigation__element{
+    margin: 3rem 2.5rem;
+}
+
+.navigation__element a{
+    text-decoration: none;
+    color: #474747;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    padding-bottom: .8rem;
+    transition: border-bottom .2s;
+}
+
+.navigation__element a:hover{
+    border-bottom: 3px solid #3ebbf0;
+}
+
+header{
+    background: url('./Images/Reflektori.jpg') no-repeat top center/cover;
+    height: 95rem;
+    padding-top: 2rem;
+}
+
+.hero{
+    text-align: center;
+}
+
+.hero h1{
+    font-weight: 900;
+    font-size: 6.6rem;
+    margin: 4rem;
+    text-transform: uppercase;
+}
+
+q{
+    color: #3ebbf0;
+}
+
+.hero span{
+    color: #252525;
+}
+
+.hero .buttons{
+    text-align: center;
+}
+
+.hero-btn{
+    height: 5rem;
+    width: 22rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin: 0 1.3rem;
+    font-weight: 700;
+}
+
+.hero-btn.white{
+    color: #3ebbf0;
+    border: 2px solid #3ebbf0;
+    background-color: #fff;
+    transition: all .2s ease-in;
+}
+
+.hero-btn.white:hover{
+    color: #fff;
+    background-color:#3ebbf0;
+}
+
+.hero-btn.blue{
+    color: #fff;
+    border: none;
+    background-color: #3ebbf0;
+    transition: all .2s ease-in;
+}
+
+.hero-btn.blue:hover{
+    color: #3ebbf0;
+    background-color: #fff;
+    border: 2px solid #3ebbf0;
+}
+
+.logo img{
+    margin: 0 2.5rem;
+    height: 13rem;
+    width: 8.5rem;
+}
+
+.about{
+    display: flex;
+    margin: 10rem 0;
+}
+
+.logo-left{
+    display: flex;
+    text-align: right;
+    margin-right: 17.5rem;
+}
+
+.logo-right{
+    display: flex;
+    text-align: right;
+    margin-left: 10%;
+}
+
+.about .logo__line{
+    background-color: #3ebbf0;
+    height: 12.5rem;
+    width: 42rem;
+    align-self: center;
+    margin-right: 4rem;
+}
+
+.logo__text{
+    align-self: center;
+    text-align: left
+}
+
+.logo__text h1{
+    font-size: 17rem;
+    color: #252525;
+    line-height: 16rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.about-info{
+    margin: 2rem 17.5rem;
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.about-info h2,
+.contact-form h2{
+    font-weight: 900;
+    font-size: 4rem;
+    color: #252525;
+    text-transform: uppercase;
+    margin: 1.8rem 0 .8rem 0;
+}
+
+.about-info__line{
+    background-color: #3ebbf0;
+    width: 7rem;
+    height: .6rem;
+    margin-bottom: 3rem;
+}
+
+.about-info h3{
+    font-weight: 900;
+    font-size: 1.8rem;
+    color: #252525;
+    text-transform: uppercase;
+    margin: 2rem 0;
+}
+
+.about-info p,
+.contact-form p{
+    font-size: 1.4rem;
+    color: #767676;
+    line-height: 2.1rem;
+}
+
+.what-we-do{
+    display: flex;
+    text-align: left;
+}
+
+.what-we-do__slider{
+    position: relative;
+    width: 50%;
+    height: auto;;
+}
+
+.slider{
+    position: relative;
+    overflow: hidden;
+    height: 68.5rem;
+    text-align: center;
+}
+
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .4s ease-in-out;
+}
+
+.slide.current{
+    opacity: 1;
+}
+
+.slide .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-weight: 900;
+    font-size: 5rem;
+    text-transform: uppercase;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.buttons button#next{
+    position: absolute;
+    top: 45%;
+    right: 1.5rem;
+    border: none;
+    outline: none;
+    margin-right: 2rem;
+}
+
+.buttons button#prev{
+    position: absolute;
+    top: 45%;
+    left: 1.5rem;
+    border: none;
+    outline: none;
+    transform: scaleX(-1);
+    margin-left: 2rem;
+}
+
+.buttons button{
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.slide.current .content{
+    opacity: 1;
+}
+
+.slide:first-child{
+    background: url('./Images/Shooting.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(2){
+    background: url('./Images/VFX.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(3){
+    background: url('./Images/Video-editing.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(4){
+    background: url('./Images/2D-animation.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(5){
+    background: url('./Images/Compositing.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(6){
+    background: url('./Images/Corporate.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(7){
+    background: url('./Images/Live-streaming.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-child(8){
+    background: url('./Images/Motion-graphics.jpg') no-repeat center center/cover;
+}
+
+
+.what-we-do .logo__line{
+    background-color: #3ebbf0;
+    height: 12.5rem;
+    flex-shrink:1;
+    align-self: center;
+    width: 40rem;
+}
+
+.what-we-do__text h1,
+.contact__text h1{
+    font-size: 17rem;
+    color: #252525;
+    line-height: 16rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+
+.our-work{
+    display: flex;
+    position: relative;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.our-work .left-logo{
+    display: flex;
+    margin-right: 10%;
+    align-self: center;
+    margin-bottom: 8rem;
+}
+.our-work__slider{
+    position: relative;
+    width: 50%;
+    height: auto;
+}
+
+.our-work .logo__line{
+    background-color: #3ebbf0;
+    height: 12.5rem;
+    width: 32rem;
+    align-self: center;
+    margin-right: 4rem;
+}
+
+.our-work-slide:first-child{
+    background: url('./Images/Heiniken.jpg') no-repeat center center/cover;
+}
+
+.our-work-slide .content{
+    top: 50%;
+    left: 50%;
+}
+
+.btn{
+    height: 5rem;
+    width: 22rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 1rem 1.3rem;
+    position: relative;
+    top: -10rem;
+    font-size: 1.6rem;
+    transition: all .2s ease;
+}
+
+.btn.white{
+    color: #fff;
+    border: 2px solid #fff;
+    background-color: transparent;
+}
+
+.btn.white:hover{
+    background-color: #3ebbf0;
+    border: none;
+}
+
+.btn.blue{
+    color: #fff;
+    background-color: #3ebbf0;
+    outline: none;
+    border: none;
+}
+
+.btn.blue:hover{
+    background-color: #fff;
+    color: #3ebbf0;
+}
+
+.contact{
+    display: flex;
+}
+
+.contact-form{
+    text-align: left;
+    margin: 0 17.5rem;
+    width: 61rem;
+}
+
+input{
+    width: 29.5rem;
+    height: 5rem;
+    margin: 2rem 1.8rem 2rem 0;
+    font-size: 1.4rem;
+    padding: 1rem;
+    outline: none;
+}
+
+::-webkit-input-placeholder,
+::-webkit-textarea-placeholder{
+    font-style: italic;
+    font-size: 1.4rem;
+    color: #b2b2b2;
+    font-weight: 300
+}
+
+textarea{
+    height: 20rem;
+    width: 61rem;
+    padding: 1rem;
+    outline: none;
+    display: block;
+}
+
+input[type="submit"]{
+    font-style: normal;
+    color: #3ebbf0;
+    border: 2px solid #3ebbf0;
+    background-color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-left: 31.5rem;
+    cursor: pointer;
+}
+
+input:nth-child(2){
+    margin-right: 0;
+}
+
+.contact-logo{
+    text-align: left;
+    margin-left: 17.5rem;
+    margin-top: 4.5rem;
+}
+
+.contact .logo__line{
+    width: 30.5rem;
+}
+
+.contact-icons{
+    display: flex;
+    margin-bottom: 3rem;
+    justify-content: space-between;
+}
+
+.contact-icon{
+    display: flex;
+    margin: 3rem 6rem 0 0;
+    font-size: 1.4rem;
+}
+
+.contact-icon img{
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+.contact-icon.letter img{
+    width: 3.6rem;
+    height: 2.7rem;
+    margin-right: 0;
+}
+
+.contact-icon p{
+    align-self: center;
+    color: #3ebbf0;
+    margin-left: 1.3rem;
+}
+
+.footer{
+    background-color: #3ebbf0;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 18rem;
+    height: 6rem;
+    font-size: 1.5rem
+}
+
+.footer-icons img{
+    margin-right: 2rem;
+    width: 4.2rem;
+    height: 3.2rem;
+}
+
+@media screen and (max-width: 1400px){
+    html{
+        font-size: 5px;
+    }
+
+    .our-work-buttons button#next{
+        position: absolute;
+        top: 40%;
+        right: 1.5rem;
+        border: none;
+        outline: none;
+        margin-right: 2rem;
+    }
+    
+    .our-work-buttons button#prev{
+        position: absolute;
+        top: 40%;
+        left: 1.5rem;
+        border: none;
+        outline: none;
+        transform: scaleX(-1);
+        margin-left: 2rem;
+    }
+
+    .footer-icons img{
+        height: 3.8rem;
+    }
+}
+
+@media screen and (max-width: 1280px){
+
+    .contact-icon{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-icon p{
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .contact-icon img{
+        margin: 0 auto;
+    }
+
+    .contact-icon.letter{
+        margin-right: 0;
+    }
+
+    .contact-icon.letter img{
+        margin: 0 auto;
+    }
+    
+}
+
+@media screen and (max-width: 1024px){
+    html{
+        font-size: 7px;
+    }
+
+    .contact-icon{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contact-icon p{
+        margin-left: 0;
+    }
+  
+}
+
+@media screen and (max-width: 900px){
+    html{
+        font-size: 5px;
+    }
+
+    .about-info p,
+    .contact-form p{
+        font-size: 2rem;
+    }
+  
+    .our-work-slide .content{
+        top: 51%;
+    }
+
+   
+  
+}
+
+
+
+
+
+
+
+
+
