@@ -149,7 +149,7 @@ q{
 .line{
     background-color: #3ebbf0;
     height: 12.5rem;
-    flex-basis: 50%;
+    flex-basis: 60%;
     margin-right: 4rem;
     align-self: center;
 }
@@ -160,7 +160,7 @@ q{
 }
 
 .m-right{
-    width: 70%;
+    width: fit-content;
 }
 
 .about-info{
@@ -222,7 +222,8 @@ q{
     height: 100%;
 }
 
-.slide{
+.slide,
+.our-work-slide{
     position: absolute;
     top: 0;
     left: 0;
@@ -402,7 +403,7 @@ q{
 input{
     width: 46%;
     height: 5rem;
-    margin: 2rem 3rem 2rem 0;
+    margin: 2rem 3.5rem 2rem 0;
     font-size: 1.4rem;
     padding: 1rem;
     outline: none;
