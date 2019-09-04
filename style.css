@@ -22,6 +22,7 @@ nav{
     list-style: none;
 }
 
+
 .navigation__element{
     margin: 3rem 2.5rem;
 }
@@ -40,7 +41,7 @@ nav{
 }
 
 header{
-    background: url('./Images/Reflektori.jpg') no-repeat top center/cover;
+    background: url('./Images/Reflektori.jpg') no-repeat center center/cover;
     height: 95rem;
     padding-top: 2rem;
 }
@@ -81,7 +82,7 @@ q{
     color: #3ebbf0;
     border: 2px solid #3ebbf0;
     background-color: #fff;
-    transition: all .2s ease-in;
+    transition: all .2s ease;
 }
 
 .hero-btn.white:hover{
@@ -93,7 +94,7 @@ q{
     color: #fff;
     border: none;
     background-color: #3ebbf0;
-    transition: all .2s ease-in;
+    transition: all .2s ease;
 }
 
 .hero-btn.blue:hover{
@@ -114,46 +115,33 @@ q{
     width: 100%;
 }
 
-.about .logo{
-    width: 50%;
-    display: flex;
-    padding-right: 10%;
-}
-
 .logo-left{
     display: flex;
     text-align: right;
     width: 50%;
     justify-content: space-between;
+    padding-right: 10%;
 }
 
 .logo-right{
     display: flex;
-    text-align: right;
+    text-align: left;
     justify-content: space-between;
     width: 50%;
     padding-left: 10%;
 }
 
-.about .logo__line{
+.line{
     background-color: #3ebbf0;
     height: 12.5rem;
-    flex-basis: 50%;
+    flex-basis: 100%;
     align-self: center;
+    display: inline-block
+}
+
+.about-logo__line,
+.our-work-logo__line{
     margin-right: 4rem;
-}
-
-.logo__text{
-    align-self: center;
-    text-align: left
-}
-
-.logo__text h1{
-    font-size: 17rem;
-    color: #252525;
-    line-height: 16rem;
-    text-transform: uppercase;
-    font-weight: 900;
 }
 
 .about-info{
@@ -198,12 +186,13 @@ q{
     display: flex;
     text-align: left;
     justify-content: space-between;
+    width: 100%;
 }
 
-.what-we-do__slider{
+.what-we-do__slider,
+.our-work__slider{
     position: relative;
     width: 50%;
-    height: auto;;
 }
 
 .slider{
@@ -243,7 +232,7 @@ q{
 
 .buttons button#next{
     position: absolute;
-    top: 50%;
+    top: 46%;
     right: 1.5rem;
     border: none;
     outline: none;
@@ -252,7 +241,7 @@ q{
 
 .buttons button#prev{
     position: absolute;
-    top: 50%;
+    top: 46%;
     left: 1.5rem;
     border: none;
     outline: none;
@@ -301,24 +290,27 @@ q{
     background: url('./Images/Motion-graphics.jpg') no-repeat center center/cover;
 }
 
-.what-we-do .logo__line{
-    background-color: #3ebbf0;
-    height: 12.5rem;
-    flex-shrink:1;
-    align-self: center;
-    flex-basis: 70%;
-    margin-left: -21rem;
+.what-we-do-logo__line{
+    margin-left: -18rem;
 }
 
-.what-we-do__text h1,
-.contact__text h1{
+.what-we-do-logo__text,
+.about-logo__text,
+.our-work-logo__text,
+.contact-logo__text{
+   align-self: center;
+}
+
+.what-we-do-logo__text h1,
+.contact-logo__text h1,
+.our-work-logo__text h1,
+.about-logo__text h1{
     font-size: 17rem;
     color: #252525;
     line-height: 16rem;
     text-transform: uppercase;
     font-weight: 900;
 }
-
 
 .our-work{
     display: flex;
@@ -328,33 +320,17 @@ q{
     margin-bottom: 2rem;
 }
 
-.our-work .left-logo{
-    display: flex;
-    align-self: center;
-    flex-basis: 50%;
-    padding-right: 10%;
-}
-.our-work__slider{
-    position: relative;
-    width: 50%;
-    height: auto;
-}
-
-.our-work .logo__line{
-    background-color: #3ebbf0;
-    height: 12.5rem;
-    width: 50%;
-    align-self: center;
-    margin-right: 4rem;
-}
-
 .our-work-slide:first-child{
     background: url('./Images/Heiniken.jpg') no-repeat center center/cover;
 }
 
-.our-work-slide .content{
-    top: 50%;
-    left: 50%;
+.slide{
+    position: relative;
+}
+
+.our-work-buttons{
+    position: relative;
+    bottom: 5%;
 }
 
 .btn{
@@ -367,6 +343,7 @@ q{
     top: -10rem;
     font-size: 1.6rem;
     transition: all .2s ease;
+    cursor: pointer;
 }
 
 .btn.white{
@@ -404,7 +381,7 @@ q{
 }
 
 input{
-    width: 29.5rem;
+    width: 46%;
     height: 5rem;
     margin: 2rem 1.8rem 2rem 0;
     font-size: 1.4rem;
@@ -422,7 +399,7 @@ input{
 
 textarea{
     height: 20rem;
-    width: 61rem;
+    width: 95%;
     padding: 1rem;
     outline: none;
     display: block;
@@ -435,25 +412,21 @@ input[type="submit"]{
     background-color: #fff;
     text-transform: uppercase;
     font-weight: 700;
-    margin-left: 31.5rem;
+    margin-left: 49%;
     cursor: pointer;
+    transition: all .2s ease;
+}
+
+input[type="submit"]:hover{
+    color: #FFF;
+    background-color: #3ebbf0;
 }
 
 input:nth-child(2){
     margin-right: 0;
 }
 
-.contact .logo-right{
-    text-align: left;
-    padding-left: 10%;
-    width: 50%;
-}
-
 .contact-logo__line{
-    flex-basis: 50%;
-    height: 12.5rem;
-    background-color: #3ebbf0;
-    align-self: center;
     margin-left: 4rem;
 }
 
@@ -506,14 +479,29 @@ input:nth-child(2){
     height: 3.2rem;
 }
 
-@media screen and (max-width: 1400px){
-
-    .footer-icons img{
-        height: 3.8rem;
-    }
-}
-
 @media screen and (max-width: 1280px){
+
+    html{
+        font-size: 8px;
+    }
+
+    .about p,
+    .contact-form p{
+        font-size: 1.8rem;
+    }
+
+    .contact-form{
+        margin: 0 6%;
+    }
+
+    .contact-icon{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contact-icon p{
+        margin-left: 0;
+    }
 
     .contact-icon{
         flex-direction: column;
@@ -536,42 +524,203 @@ input:nth-child(2){
     .contact-icon.letter img{
         margin: 0 auto;
     }
-    
+  
 }
 
 @media screen and (max-width: 1024px){
 
-    .contact-icon{
-        flex-direction: column;
-        justify-content: center;
+    html{
+        font-size: 6px;
     }
 
-    .contact-icon p{
-        margin-left: 0;
-    }
-  
-}
-
-@media screen and (max-width: 900px){
-
-    .about-info p,
+    .about p,
     .contact-form p{
         font-size: 2rem;
+    }
+
+    .contact-form{
+        margin-right: 8%;
     }
   
     .our-work-slide .content{
         top: 51%;
     }
 
-   
+    .slide.current .content{
+        top: 51%;
+    }
   
 }
 
+@media screen and (max-width: 724px){
+
+    html{
+        font-size: 5px;
+    }
+
+    .about p,
+    .contact-form p{
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+    }
+
+    .about h3{
+        font-size: 4rem;
+    }
+
+    .about{
+        margin-top: 0;
+    }
+
+    .navigation__element a{
+        font-size: 2.5rem;
+    }
+
+    nav .logo{
+        padding: 0;
+    }
+
+    .our-work-slide:first-child{
+        background: url('./Images/Heiniken.jpg') no-repeat left left/contain;
+    }
+
+    .logo-right{
+        padding-left: 5%;
+    }
+
+    .logo-left{
+        padding-right: 5%;
+    }
+
+    .logo, 
+    .about-info{
+        padding: 3%;
+    }
+}
 
 
+@media screen and (max-width: 420px){
 
+    html{
+        font-size: 5px;
+    }
 
+    nav{
+        display: none;
+    }
 
+    .our-work-slide:first-child{
+        background: url('./Images/Heiniken.jpg') no-repeat center center/cover;
+    }
 
+    header{
+        padding: 2rem;
+        height: 30vh;
+        width: 100%;
+    }
 
+    .hero h1{
+        margin-top: 8rem;
+        font-size: 3rem;
+    }
 
+    .hero .buttons{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero .buttons button{
+        margin-top: 2rem;
+    }
+
+    .about{
+        flex-direction: column;
+        margin: 5rem 0;
+        width: 100%;
+    }
+
+    .logo-left,
+    .logo-right{
+        width: 100%;
+        padding: 0;
+        padding-left: 3rem;
+    }
+
+    .about-logo__line,
+    .what-we-do-logo__line,
+    .our-work-logo__line,
+    .contact-logo__line{
+        display: none;
+    }
+
+    .about-logo__text,
+    .what-we-do-logo__text,
+    .our-work-logo__text,
+    .contact-logo__text{
+        display: flex;
+    }
+
+    .h-response{
+        margin-right: 2rem;
+    }
+
+    .about-logo__text h1,
+    .what-we-do-logo__text h1,
+    .our-work-logo__text h1,
+    .contact-logo__text h1{
+        font-size: 8rem;
+    }
+
+    .logo__line__respons{
+        background-color: #3ebbf0;
+        height: 7rem;
+        flex-basis: 100%;
+        align-self: center;
+        margin-left: 2rem;
+    }
+
+    .about-info{
+        margin-top: 0;
+        padding: 0 3rem;
+        width: 100%;
+    }
+
+    .what-we-do{
+        flex-direction: column-reverse;
+    }
+
+    .what-we-do__slider,
+    .our-work__slider{
+        width: 100%;
+    }
+
+    .slide .content{
+        top: 52%;
+    }
+
+    .our-work{
+        flex-direction: column;
+    }
+
+    .contact{
+        flex-direction: column-reverse;
+    }
+
+    .contact-form{
+        width: 100%;
+        margin: 0;
+        padding: 0 3em;
+    }
+
+    input[type="submit"]{
+        margin-left: 0;
+    }
+    
+    input{
+        display: block;
+    }
+
+    .footer{
+        padding: 0 8rem;
+    }
+}
