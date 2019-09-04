@@ -116,6 +116,10 @@ q{
     width: 100%;
 }
 
+.logo-response{
+    display: none;
+}
+
 .logo-left{
     display: flex;
     flex-direction: column;
@@ -233,11 +237,13 @@ q{
     transition: opacity .4s ease-in-out;
 }
 
-.slide.current{
+.slide.current,
+.our-work-slide.current{
     opacity: 1;
 }
 
-.slide .content{
+.slide .content,
+.our-work-slide .content{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -276,7 +282,8 @@ q{
     background-color: transparent;
 }
 
-.slide.current .content{
+.slide.current .content,
+.our-work-slide.current .content{
     opacity: 1;
 }
 
@@ -675,26 +682,38 @@ input:nth-child(2){
     .what-we-do-logo__text,
     .our-work-logo__text,
     .contact-logo__text{
+        display: none;
+    }
+
+    .logo-response{
         display: flex;
+        padding-left: 3rem;
+        width: 100%;
     }
 
-    .h-response{
-        margin-right: 2rem;
+    .respone-text{
+        width: fit-content;
     }
 
-    .about-logo__text h1,
-    .what-we-do-logo__text h1,
-    .our-work-logo__text h1,
-    .contact-logo__text h1{
+    .logo-response  h1{
         font-size: 8rem;
+        color: #252525;
+        text-transform: uppercase;
+        font-weight: 900;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
-    .logo__line__respons{
+    .logo__line__response{
         background-color: #3ebbf0;
         height: 7rem;
         flex-basis: 100%;
         align-self: center;
         margin-left: 2rem;
+    }
+
+    .h-response{
+        margin-right: 2rem;
     }
 
     .about-info{
