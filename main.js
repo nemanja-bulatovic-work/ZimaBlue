@@ -1,13 +1,13 @@
-const slides = document.querySelectorAll('.slide');
-const next = document.querySelector('#next');
-const prev = document.querySelector('#prev');
-const auto = false; 
-const intervalTime = 4000;
-let slideInterval;
+var slides = document.querySelectorAll('.slide');
+var next = document.querySelector('#next');
+var prev = document.querySelector('#prev');
+var auto = true; 
+var intervalTime = 4000;
+var slideInterval;
 
-const nextSlide = () => {
+function nextSlide(){
  
-  const current = document.querySelector('.current');
+  var current = document.querySelector('.current');
   
   current.classList.remove('current');
  
@@ -16,12 +16,12 @@ const nextSlide = () => {
   } else {
     slides[0].classList.add('current');
   }
-  setTimeout(() => current.classList.remove('current'));
+  setTimeout(function() { return current.classList.remove('current')});
 };
 
-const prevSlide = () => {
+function prevSlide(){
  
-  const current = document.querySelector('.current');
+  var current = document.querySelector('.current');
  
   current.classList.remove('current');
   
@@ -30,11 +30,11 @@ const prevSlide = () => {
   } else {
     slides[slides.length - 1].classList.add('current');
   }
-  setTimeout(() => current.classList.remove('current'));
+  setTimeout(function() { return current.classList.remove('current')});
 };
 
 
-next.addEventListener('click', e => {
+next.addEventListener('click', function(e) {
   nextSlide();
   if (auto) {
     clearInterval(slideInterval);
@@ -42,7 +42,7 @@ next.addEventListener('click', e => {
   }
 });
 
-prev.addEventListener('click', e => {
+prev.addEventListener('click', function(e){
   prevSlide();
   if (auto) {
     clearInterval(slideInterval);
